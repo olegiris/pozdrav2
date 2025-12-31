@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поздравление для Настеньки</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe8ec 50%, #ffdfe6 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(15px, 3vw, 25px);
+            color: #333;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 182, 193, 0.08) 0%, transparent 50%);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: min(900px, 95vw);
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.98);
+            border-radius: clamp(24px, 3vw, 32px);
+            box-shadow: 
+                0 20px 40px rgba(214, 51, 132, 0.08),
+                0 8px 16px rgba(214, 51, 132, 0.04),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+            padding: clamp(40px, 5vw, 60px) clamp(25px, 4vw, 50px);
+            text-align: center;
+            animation: gentleAppear 1.2s ease-out;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #ff8fab, #fb6f92, #ff477e);
+            border-radius: clamp(24px, 3vw, 32px) clamp(24px, 3vw, 32px) 0 0;
+        }
+        
+        @keyframes gentleAppear {
+            0% { 
+                opacity: 0; 
+                transform: translateY(40px) scale(0.98);
+            }
+            100% { 
+                opacity: 1; 
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .header-section {
+            margin-bottom: clamp(30px, 5vw, 50px);
+        }
+        
+        .video-icon {
+            font-size: clamp(3.5rem, 8vw, 5rem);
+            margin-bottom: clamp(15px, 3vw, 25px);
+            color: #ff8fab;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: inline-block;
+            filter: drop-shadow(0 4px 12px rgba(255, 142, 171, 0.2));
+        }
+        
+        .video-icon:hover {
+            transform: scale(1.1) rotate(10deg);
+            color: #fb6f92;
+        }
+        
+        h1 {
+            color: #2d2d2d;
+            margin-bottom: clamp(10px, 2vw, 15px);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+        
+        .name-highlight {
+            display: inline-block;
+            position: relative;
+            padding: 0 clamp(8px, 1vw, 10px);
+            font-weight: 800;
+            color: #ff477e;
+            text-shadow: 0 2px 4px rgba(255, 71, 126, 0.15);
+            background: linear-gradient(135deg, #ff8fab 0%, #fb6f92 50%, #ff477e 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .greeting-text {
+            color: #666;
+            margin-top: clamp(15px, 3vw, 25px);
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            line-height: 1.7;
+            max-width: min(700px, 90vw);
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            padding: 0 clamp(10px, 2vw, 20px);
+        }
+        
+        .heart-section {
+            margin: clamp(30px, 5vw, 40px) 0;
+            position: relative;
+        }
+        
+        .heart {
+            color: #ff8fab;
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            margin: clamp(15px, 3vw, 20px) auto;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: inline-block;
+            animation: gentleHeartbeat 2.5s ease-in-out infinite;
+            filter: drop-shadow(0 4px 12px rgba(255, 142, 171, 0.25));
+        }
+        
+        .heart:hover {
+            transform: scale(1.2);
+            color: #ff477e;
+        }
+        
+        @keyframes gentleHeartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+        
+        .download-section {
+            margin: clamp(40px, 6vw, 60px) 0;
+            padding: clamp(30px, 4vw, 50px) clamp(20px, 3vw, 50px);
+            background: linear-gradient(135deg, rgba(255, 245, 247, 0.8), rgba(255, 240, 245, 0.9));
+            border-radius: clamp(20px, 3vw, 24px);
+            box-shadow: 
+                0 12px 24px rgba(251, 111, 146, 0.08),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 182, 193, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .download-section:hover {
+            box-shadow: 
+                0 16px 32px rgba(251, 111, 146, 0.12),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #ff8fab 0%, #fb6f92 50%, #ff477e 100%);
+            color: white;
+            border: none;
+            padding: clamp(20px, 4vw, 28px) clamp(40px, 6vw, 65px);
+            font-size: clamp(1.2rem, 3vw, 1.7rem);
+            font-weight: 600;
+            border-radius: 70px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 
+                0 12px 25px rgba(255, 71, 126, 0.2),
+                0 4px 12px rgba(255, 71, 126, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(12px, 2vw, 18px);
+            margin: clamp(15px, 3vw, 25px) 0;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: min(500px, 90vw);
+        }
+        
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s ease;
+        }
+        
+        .download-btn:hover::before {
+            left: 100%;
+        }
+        
+        .download-btn:active {
+            transform: translateY(-4px);
+        }
+        
+        .download-icon {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            transition: transform 0.3s ease;
+        }
+        
+        .download-btn:hover .download-icon {
+            transform: translateY(-3px);
+        }
+        
+        .message {
+            margin-top: clamp(25px, 4vw, 35px);
+            padding: clamp(20px, 3vw, 28px);
+            background: white;
+            border-radius: clamp(15px, 2vw, 18px);
+            color: #666;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            line-height: 1.7;
+            text-align: center;
+            border: 1px solid rgba(255, 182, 193, 0.4);
+            box-shadow: 0 8px 20px rgba(255, 182, 193, 0.05);
+            font-weight: 400;
+            letter-spacing: 0.1px;
+            position: relative;
+        }
+        
+        .message::before {
+            content: '💝';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 0 clamp(10px, 2vw, 15px);
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+        }
+        
+        .video-info {
+            margin-top: clamp(20px, 3vw, 30px);
+            padding: clamp(15px, 3vw, 25px);
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: clamp(12px, 2vw, 16px);
+            color: #777;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            display: flex;
+            justify-content: center;
+            gap: clamp(20px, 4vw, 40px);
+            flex-wrap: wrap;
+            border: 1px solid rgba(255, 182, 193, 0.3);
+        }
+        
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(5px, 1vw, 8px);
+            min-width: 100px;
+        }
+        
+        .info-icon {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: #ff8fab;
+        }
+        
+        .footer {
+            margin-top: clamp(30px, 5vw, 50px);
+            color: #888;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            text-align: center;
+            padding: clamp(20px, 3vw, 30px);
+            max-width: min(900px, 95vw);
+            line-height: 1.6;
+            letter-spacing: 0.2px;
+        }
+        
+        .footer p {
+            margin: clamp(5px, 1vw, 8px) 0;
+        }
+        
+        .footer-signature {
+            margin-top: clamp(15px, 3vw, 20px);
+            color: #ff8fab;
+            font-weight: 600;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            letter-spacing: 1px;
+        }
+        
+        /* Модальное окно создателей */
+        .creators-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 245, 247, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            padding: clamp(15px, 3vw, 25px);
+        }
+        
+        .creators-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .creators-content {
+            background: white;
+            padding: clamp(40px, 6vw, 70px) clamp(25px, 4vw, 50px);
+            border-radius: clamp(24px, 3vw, 32px);
+            text-align: center;
+            max-width: min(550px, 90vw);
+            width: 100%;
+            box-shadow: 
+                0 25px 50px rgba(214, 51, 132, 0.1),
+                0 10px 20px rgba(214, 51, 132, 0.05);
+            transform: translateY(30px) scale(0.95);
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid rgba(255, 182, 193, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .creators-modal.active .creators-content {
+            transform: translateY(0) scale(1);
+        }
+        
+        .creators-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #ff8fab, #fb6f92, #ff477e);
+        }
+        
+        .creators-heart {
+            font-size: clamp(3rem, 6vw, 4rem);
+            color: #ff8fab;
+            margin-bottom: clamp(15px, 3vw, 25px);
+            animation: gentleHeartbeat 2.5s ease-in-out infinite;
+        }
+        
+        .creators-title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: clamp(15px, 3vw, 20px);
+            color: #555;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 0 clamp(10px, 2vw, 20px);
+        }
+        
+        .creators-names {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin: clamp(20px, 4vw, 30px) 0;
+            background: linear-gradient(135deg, #ff8fab 0%, #fb6f92 50%, #ff477e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            line-height: 1.3;
+            padding: 0 clamp(15px, 3vw, 20px);
+            text-shadow: 0 4px 8px rgba(255, 142, 171, 0.15);
+        }
+        
+        .close-modal {
+            margin-top: clamp(25px, 4vw, 35px);
+            padding: clamp(15px, 3vw, 18px) clamp(30px, 5vw, 45px);
+            background: linear-gradient(135deg, #ff8fab 0%, #fb6f92 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 8px 20px rgba(255, 142, 171, 0.2);
+            letter-spacing: 0.5px;
+            min-width: 200px;
+            max-width: 90%;
+        }
+        
+        .close-modal:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(255, 142, 171, 0.3);
+        }
+        
+        /* Кнопка повторного просмотра создателей */
+        .show-creators-btn {
+            position: fixed;
+            bottom: clamp(15px, 3vw, 30px);
+            right: clamp(15px, 3vw, 30px);
+            background: white;
+            color: #ff8fab;
+            border: 1px solid rgba(255, 142, 171, 0.3);
+            border-radius: 50px;
+            padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 30px);
+            font-size: clamp(0.85rem, 2vw, 1rem);
+            font-weight: 600;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 100;
+            box-shadow: 
+                0 8px 20px rgba(255, 142, 171, 0.1),
+                0 2px 8px rgba(255, 142, 171, 0.05);
+            display: flex;
+            align-items: center;
+            gap: clamp(8px, 1.5vw, 10px);
+            white-space: nowrap;
+        }
+        
+        .show-creators-btn:hover {
+            background: linear-gradient(135deg, #ff8fab 0%, #fb6f92 100%);
+            color: white;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 12px 25px rgba(255, 142, 171, 0.2),
+                0 4px 12px rgba(255, 142, 171, 0.1);
+            border-color: transparent;
+        }
+        
+        /* Плавающие элементы */
+        .floating-elements {
+            position: fixed;
+            pointer-events: none;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .floating-element {
+            position: absolute;
+            font-size: clamp(18px, 4vw, 24px);
+            opacity: 0.1;
+            animation: floatElement 25s infinite linear;
+            color: #ff8fab;
+        }
+        
+        @keyframes floatElement {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.08;
+            }
+            90% {
+                opacity: 0.08;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Конфетти */
+        .confetti {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            pointer-events: none;
+            z-index: 1000;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+        
+        /* Мобильные оптимизации */
+        @media (max-width: 768px) {
+            .download-btn {
+                border-radius: 60px;
+                padding: 18px 35px;
+            }
+            
+            .video-info {
+                gap: 20px;
+            }
+            
+            .info-item {
+                min-width: 80px;
+            }
+            
+            .show-creators-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .download-section {
+                padding: 25px 15px;
+            }
+            
+            .video-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .info-item {
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+                min-width: auto;
+            }
+            
+            .creators-content {
+                padding: 40px 20px;
+            }
+            
+            .close-modal {
+                min-width: 180px;
+                padding: 15px 30px;
+            }
+            
+            .show-creators-btn {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 15px;
+                font-size: 0.85rem;
+            }
+            
+            .message {
+                padding: 20px 15px;
+            }
+        }
+        
+        /* Ориентация телефона */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .container {
+                margin: 20px 0;
+                padding: 25px 30px;
+            }
+            
+            .download-section {
+                margin: 30px 0;
+                padding: 25px 20px;
+            }
+            
+            .footer {
+                margin-top: 20px;
+                padding: 15px;
+            }
+            
+            .show-creators-btn {
+                bottom: 10px;
+                right: 10px;
+                padding: 8px 15px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Большие экраны */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1000px;
+            }
+            
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            .greeting-text {
+                font-size: 1.4rem;
+            }
+        }
+        
+        /* Сенсорные устройства */
+        @media (hover: none) {
+            .download-btn:hover {
+                transform: none;
+            }
+            
+            .heart:hover {
+                transform: none;
+            }
+            
+            .video-icon:hover {
+                transform: none;
+            }
+            
+            .show-creators-btn:hover {
+                transform: none;
+            }
+            
+            .close-modal:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Модальное окно создателей -->
+    <div class="creators-modal active" id="creatorsModal">
+        <div class="creators-content">
+            <div class="creators-heart">🎬</div>
+            <h2 class="creators-title">Это поздравление создал:</h2>
+            <div class="creators-names">Любящий парень</div>
+            <div class="creators-heart">❤️</div>
+            <button class="close-modal" onclick="closeCreatorsModal()">Начать просмотр</button>
+        </div>
+    </div>
+
+    <!-- Плавающие элементы -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <!-- Основной контент -->
+    <div class="container">
+        <div class="header-section">
+            <div class="video-icon" onclick="createGentleEffects()">🎬</div>
+            <h1>Специальное поздравление для <span class="name-highlight">Анастасии Шиверской</span></h1>
+            
+            <p class="greeting-text">
+                Любимая моя Настенька, это видео специально для тебя!
+            </p>
+        </div>
+        
+        <div class="heart-section">
+            <div class="heart" onclick="createHearts()">❤️</div>
+        </div>
+        
+        <div class="download-section">
+            <button class="download-btn" onclick="downloadVideo()">
+                <span class="download-icon">⬇️</span>
+                <span>Скачать видео</span>
+            </button>
+            
+            <div class="message">
+                Нажмите на кнопку выше, чтобы скачать персональное видео.<br>
+                Файл будет сохранён в формате MP4 в вашей папке "Загрузки".
+            </div>
+            
+            <div class="video-info">
+                <div class="info-item">
+                    <div class="info-icon">📁</div>
+                    <div>Формат: MP4</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">⏱️</div>
+                    <div>Длительность: 1-2 минуты</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">🎵</div>
+                    <div>С музыкальным сопровождением</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Искреннее поздравление создано специально Анастасии</p>
+        <p>С любовью и самыми тёплыми пожеланиями</p>
+        <div class="footer-signature">Любящий парень</div>
+    </div>
+
+    <!-- Кнопка для повторного просмотра создателей -->
+    <button class="show-creators-btn" onclick="showCreatorsModal()">
+        <span>👨‍👩‍👦</span>
+        <span>Создатель</span>
+    </button>
+
+    <script>
+        // Основные элементы
+        const creatorsModal = document.getElementById('creatorsModal');
+        const floatingElements = document.getElementById('floatingElements');
+        
+        // Создаем плавающие элементы при загрузке
+        function createFloatingElements() {
+            const elements = ['❤️', '🎀', '✨', '🌸', '💝', '🎁', '🎉'];
+            
+            for (let i = 0; i < 12; i++) {
+                const element = document.createElement('div');
+                element.className = 'floating-element';
+                element.innerHTML = elements[Math.floor(Math.random() * elements.length)];
+                element.style.left = Math.random() * 100 + 'vw';
+                element.style.animationDuration = (20 + Math.random() * 20) + 's';
+                element.style.animationDelay = Math.random() * 10 + 's';
+                element.style.fontSize = (16 + Math.random() * 12) + 'px';
+                
+                floatingElements.appendChild(element);
+            }
+        }
+        
+        // Показать окно создателей
+        function showCreatorsModal() {
+            creatorsModal.classList.add('active');
+            createGentleEffects();
+        }
+        
+        // Закрыть окно создателей
+        function closeCreatorsModal() {
+            creatorsModal.classList.remove('active');
+            createGentleConfetti();
+        }
+        
+        // Функция для скачивания видеофайла
+        function downloadVideo() {
+            // Используем относительный путь к видеофайлу
+            const videoUrl = 'video/С_Праздником.mp4';
+            
+            // Создаем временную ссылку для скачивания
+            const tempLink = document.createElement('a');
+            tempLink.href = videoUrl;
+            tempLink.download = 'Поздравление.mp4';
+            tempLink.style.display = 'none';
+            
+            // Добавляем ссылку в документ и кликаем по ней
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            
+            // Убираем ссылку из документа
+            document.body.removeChild(tempLink);
+            
+            // Анимация успешного скачивания
+            const btn = document.querySelector('.download-btn');
+            const originalText = btn.innerHTML;
+            const originalBg = btn.style.background;
+            
+            btn.innerHTML = '<span class="download-icon">✅</span><span>Скачивание началось!</span>';
+            btn.style.background = 'linear-gradient(135deg, #8ce99a 0%, #69db7c 100%)';
+            btn.style.boxShadow = '0 12px 25px rgba(105, 219, 124, 0.2)';
+            
+            // Добавляем анимацию сердца
+            document.querySelector('.heart').style.animation = 'none';
+            setTimeout(() => {
+                document.querySelector('.heart').style.animation = 'gentleHeartbeat 2.5s ease-in-out infinite';
+            }, 10);
+            
+            // Показываем сообщение
+            showMessage('Видео скачивается! Проверьте папку "Загрузки"');
+            
+            // Создаем мягкие эффекты
+            createGentleConfetti();
+            createGentleEffects();
+            
+            // Возвращаем исходный вид кнопки через 3 секунды
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = originalBg;
+                btn.style.boxShadow = '0 12px 25px rgba(255, 71, 126, 0.2)';
+            }, 3000);
+        }
+        
+        // Создание мягкого конфетти
+        function createGentleConfetti() {
+            const colors = ['#ff8fab', '#fb6f92', '#ff477e', '#ffb6c1', '#ffc2d1'];
+            const confettiCount = window.innerWidth < 768 ? 60 : 100;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.top = '-20px';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+                    const size = Math.random() * 8 + 6;
+                    confetti.style.width = size + 'px';
+                    confetti.style.height = Math.random() > 0.5 ? size : '2px';
+                    
+                    document.body.appendChild(confetti);
+                    
+                    // Анимация конфетти
+                    const animation = confetti.animate([
+                        { 
+                            transform: `translateY(0) rotate(0deg)`, 
+                            opacity: 0.8 
+                        },
+                        { 
+                            transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`, 
+                            opacity: 0 
+                        }
+                    ], {
+                        duration: 1500 + Math.random() * 1500,
+                        easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+                    });
+                    
+                    animation.onfinish = () => {
+                        if (document.body.contains(confetti)) {
+                            document.body.removeChild(confetti);
+                        }
+                    };
+                }, i * 20);
+            }
+        }
+        
+        // Создание плавающих сердечек
+        function createHearts() {
+            const heartsContainer = document.createElement('div');
+            heartsContainer.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                z-index: 1000;
+            `;
+            
+            const heartCount = window.innerWidth < 768 ? 8 : 12;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.style.position = 'absolute';
+                heart.style.fontSize = (20 + Math.random() * 15) + 'px';
+                heart.style.color = `rgba(255, ${143 + Math.random() * 50}, ${171 + Math.random() * 50}, 0.8)`;
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = '100vh';
+                heart.style.filter = 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))';
+                
+                heartsContainer.appendChild(heart);
+                
+                // Анимация сердечка
+                const animation = heart.animate([
+                    { 
+                        transform: 'translateY(0) scale(0.5) rotate(0deg)', 
+                        opacity: 0.8 
+                    },
+                    { 
+                        transform: `translateY(-${window.innerHeight + 100}px) scale(1) rotate(${Math.random() * 360}deg)`, 
+                        opacity: 0 
+                    }
+                ], {
+                    duration: 2500 + Math.random() * 1500,
+                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+                });
+                
+                animation.onfinish = () => {
+                    if (heartsContainer.contains(heart)) {
+                        heartsContainer.removeChild(heart);
+                    }
+                };
+            }
+            
+            document.body.appendChild(heartsContainer);
+            
+            setTimeout(() => {
+                if (document.body.contains(heartsContainer)) {
+                    document.body.removeChild(heartsContainer);
+                }
+            }, 5000);
+        }
+        
+        // Мягкие визуальные эффекты
+        function createGentleEffects() {
+            createGentleConfetti();
+            
+            // Анимация контейнера
+            const container = document.querySelector('.container');
+            container.style.transform = 'translateY(-8px)';
+            setTimeout(() => {
+                container.style.transform = 'translateY(-5px)';
+            }, 100);
+        }
+        
+        // Показать сообщение
+        function showMessage(text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = text;
+            messageDiv.style.cssText = `
+                position: fixed;
+                top: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(255, 255, 255, 0.95);
+                color: #555;
+                padding: 15px 25px;
+                border-radius: 15px;
+                z-index: 1000;
+                font-weight: 500;
+                box-shadow: 
+                    0 15px 35px rgba(255, 142, 171, 0.15),
+                    0 5px 15px rgba(255, 142, 171, 0.1);
+                animation: slideDown 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+                border: 1px solid rgba(255, 182, 193, 0.4);
+                max-width: 90%;
+                text-align: center;
+                font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+                backdrop-filter: blur(10px);
+            `;
+            
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes slideDown {
+                    from { 
+                        transform: translateX(-50%) translateY(-60px); 
+                        opacity: 0; 
+                    }
+                    to { 
+                        transform: translateX(-50%) translateY(0); 
+                        opacity: 1; 
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            document.body.appendChild(messageDiv);
+            
+            setTimeout(() => {
+                if (document.body.contains(messageDiv)) {
+                    document.body.removeChild(messageDiv);
+                }
+                if (document.head.contains(style)) {
+                    document.head.removeChild(style);
+                }
+            }, 3500);
+        }
+        
+        // Инициализация при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            // Создаем плавающие элементы
+            createFloatingElements();
+            
+            // Показываем окно создателей через 0.5 секунды после загрузки
+            setTimeout(() => {
+                showCreatorsModal();
+            }, 500);
+            
+            // Анимация элементов контейнера
+            const elements = document.querySelectorAll('.container > *');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+            
+            // Автоматическое скрытие окна создателей через 5 секунд
+            setTimeout(() => {
+                if (creatorsModal.classList.contains('active')) {
+                    closeCreatorsModal();
+                }
+            }, 5000);
+        });
+        
+        // Добавляем интерактивность элементам
+        const heartElement = document.querySelector('.heart');
+        const videoIconElement = document.querySelector('.video-icon');
+        
+        if (heartElement) {
+            heartElement.addEventListener('click', createHearts);
+        }
+        
+        if (videoIconElement) {
+            videoIconElement.addEventListener('click', createGentleEffects);
+        }
+        
+        // Добавляем эффект при наведении на имя (только для устройств с мышью)
+        const nameHighlight = document.querySelector('.name-highlight');
+        if (nameHighlight) {
+            nameHighlight.addEventListener('mouseenter', function() {
+                if (window.matchMedia("(hover: hover)").matches) {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transition = 'transform 0.3s ease';
+                }
+            });
+            
+            nameHighlight.addEventListener('mouseleave', function() {
+                if (window.matchMedia("(hover: hover)").matches) {
+                    this.style.transform = 'scale(1)';
+                }
+            });
+        }
+        
+        // Обработка изменения размера окна
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                // Пересоздаем плавающие элементы при изменении размера
+                floatingElements.innerHTML = '';
+                createFloatingElements();
+            }, 250);
+        });
+    </script>
+</body>
+</html>
+
